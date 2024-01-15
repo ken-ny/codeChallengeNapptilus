@@ -29,7 +29,7 @@ public class RestApiController {
 
 	@GetMapping("/retrieveOfferDetails")
 	public ResponseEntity<List<Product>> getOfferDetail(@RequestParam Integer brand, @RequestParam Integer product,
-			@RequestParam String date2) {
+			@RequestParam String date) {
 		try {
 			List<Price> listPrices = new ArrayList<Price>();
 			List<Product> listProducts = new ArrayList<Product>();
