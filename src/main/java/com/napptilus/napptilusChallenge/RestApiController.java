@@ -1,14 +1,11 @@
 package com.napptilus.napptilusChallenge;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
+import org.apache.logging.log4j.util.PropertySource.Comparator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +29,7 @@ public class RestApiController {
 
 	@GetMapping("/retrieveOfferDetails")
 	public ResponseEntity<List<Product>> getOfferDetail(@RequestParam Integer brand, @RequestParam Integer product,
-			@RequestParam String date) {
+			@RequestParam String date2) {
 		try {
 			List<Price> listPrices = new ArrayList<Price>();
 			List<Product> listProducts = new ArrayList<Product>();
